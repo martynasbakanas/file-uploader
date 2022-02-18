@@ -55,6 +55,10 @@ return [
 
     ],
 
+    'chunk_size' => $chunkSize = env('FILE_UPLOAD_CHUNK_SIZE', 1000000), // in decimal b
+    'chunk_size_kb' => bcdiv($chunkSize, 1024, 16), // in binary kilobytes - used by Laravel
+    'user_upload_limit_24h' => 10,
+
     /*
     |--------------------------------------------------------------------------
     | Symbolic Links

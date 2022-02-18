@@ -1,0 +1,10 @@
+parameters:
+	ignoreErrors:
+	    # Ignore errors about undefined properties and static methods.
+	    # These are resolved by Laravel through magic methods.
+		- '#Access to an undefined property App\\Models\\[A-Z]([a-z]|[A-Z])*::\$([a-z]|[A-Z]|_)*#'
+		- '#Call to an undefined method ((.*|)?Illuminate\\Contracts\\Filesystem\\Filesystem|Illuminate\\Database\\Eloquent\\Relations\\.*)::([a-z]|[A-Z])*\(\)#'
+		- '#Call to an undefined static method App\\Models\\[A-Z]([a-z]|[A-Z])*::([a-z]|[A-Z])*\(\)#'
+		- '#Call to an undefined method Illuminate\\Contracts\\Auth\\(.*)#'
+		- '#Call to protected method (.*) of class Illuminate\\Database\\Eloquent\\Model#'
+
